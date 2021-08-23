@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;300;400;500;700&display=swap");
+
 :root {
   --primary: #37392e;
   --primary2: #19647e;
@@ -9,4 +11,37 @@
 body {
   background-color: var(--primary);
   color: var(--primary5);
+  margin: 0;
+  font-family: "Roboto Mono", monospace;
+}
+
+h1 {
+  margin: 1rem;
+  padding: 0;
+}
+
+@media screen and (min-width: 992px) {
+  .navbar {
+    display: flex;
+    background-color: var(--primary5);
+    color: var(--primary);
+    align-items: center;
+    justify-content: center;
+  }
+  .navbar-center {
+    display: flex;
+    max-width: 1300px;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  .navbar-links {
+    display: flex;
+  }
+  .navbar-link {
+    margin: 1rem;
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--primary);
+  }
 }
