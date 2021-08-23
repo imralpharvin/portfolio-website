@@ -1,5 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
+import { FaLinkedin, FaGithub } from "react-icons/fa"
+import { GrMail } from "react-icons/gr"
 
 const Navbar = () => {
   return (
@@ -15,7 +17,32 @@ const Navbar = () => {
               Projects
             </Link>
           </div>
-          <div>Social Media</div>
+          <div>
+            <a
+              href="https://www.linkedin.com/in/ralpharvindc/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="social-media-link"
+            >
+              <FaLinkedin size={28} />
+            </a>
+            <a
+              href="https://github.com/imralpharvin"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="social-media-link"
+            >
+              <FaGithub size={28} />
+            </a>
+            <a
+              href="mailto:ralpharvin.dc@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="social-media-link"
+            >
+              <GrMail size={28} />
+            </a>
+          </div>
         </div>
       </div>
     </>
