@@ -75,27 +75,30 @@ h1 {
 .landing {
   display: flex;
   flex-direction: column;
-
   padding-top: 5rem;
   font-size: 4rem;
-  width: 100%;
 }
 
-.landing button {
+.landing-button {
   background: none;
   font-family: "Roboto Mono", monospace;
   color: var(--primary5);
   border: solid 2px var(--primary5);
   width: fit-content;
   padding: 1rem;
-  margin-top: 1rem;
   font-weight: bold;
 }
 
-.landing button:hover {
+.landing-button:hover {
   cursor: pointer;
   color: var(--primary3);
   border: solid 2px var(--primary3);
+}
+
+.landing-button-wrapper {
+  width: fit-content;
+  height: fit-content;
+  margin: 0;
 }
 .landing-header {
   display: flex;

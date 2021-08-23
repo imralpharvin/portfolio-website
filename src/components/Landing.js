@@ -34,8 +34,8 @@ const Landing = () => {
         </span>
         .
       </div>
-      <Link to="/projects/">
-        <button>View my projects</button>
+      <Link to="/projects/" className="landing-button-wrapper">
+        <button className="landing-button">View my projects</button>
       </Link>
     </div>
   )
