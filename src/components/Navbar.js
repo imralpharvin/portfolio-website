@@ -8,7 +8,9 @@ const Navbar = () => {
     <>
       <div className="navbar">
         <div className="navbar-center">
-          <h1>ralphDC</h1>
+          <h1>
+            ralphDC<span style={{ color: "#28afb0" }}>.com</span>
+          </h1>
           <div className="navbar-links">
             <Link to="/" className="navbar-link">
               Home
