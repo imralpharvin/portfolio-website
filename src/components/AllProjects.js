@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
-import { div } from "prelude-ls"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { BiLinkExternal } from "react-icons/bi"
 
 const query = graphql`
   {
@@ -27,19 +28,29 @@ const AllProjects = () => {
   const data = useStaticQuery(query)
   const projects = data.allContentfulProject.nodes
   return (
-    <main className="allProjects">
+    <main className="projects-list">
       {projects.map(project => {
         const { title, year, description, image, link, tags } = project
+        const pathToImage = getImage(image)
         return (
-          <>
-            <div>{title}</div>
-            <div>{year}</div>
+          <div className="project">
+            <GatsbyImage image={pathToImage} alt={title} />
+            <div>
+              <h2 style={{ color: "#19647e" }}>{title}</h2>
+              <b>{year}</b>
+              <div className="tags">
+                {tags.map(tag => (
+                  <div className="tag">{tag}</div>
+                ))}
+              </div>
+            </div>
             <div>{description.description}</div>
-            <div>{link}</div>
-            {tags.map(tag => (
-              <div>{tag}</div>
-            ))}
-          </>
+            <a href={link} target="_blank" rel="noopener noreferrer">
+              <button className="project-external-button">
+                View Project <BiLinkExternal />
+              </button>
+            </a>
+          </div>
         )
       })}
     </main>

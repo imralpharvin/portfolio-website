@@ -5,6 +5,7 @@ import AllProjects from "../components/AllProjects"
 const Projects = () => {
   return (
     <Layout>
+      <h1>Projects</h1>
       <AllProjects />
     </Layout>
   )

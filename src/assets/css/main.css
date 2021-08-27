@@ -15,8 +15,9 @@ body {
   font-family: "Roboto Mono", monospace;
 }
 
-h1 {
-  margin: 1rem 0;
+h1,
+h2 {
+  margin: 0;
   padding: 0;
 }
 
@@ -29,6 +30,8 @@ h1 {
 
   align-items: center;
   justify-content: center;
+  padding: 1rem 0;
+  margin-bottom: 5rem;
 }
 .navbar-center {
   display: flex;
@@ -67,6 +70,7 @@ h1 {
   display: flex;
   max-width: 1300px;
   margin: 0 auto;
+  flex-direction: column;
 }
 
 /******************/
@@ -75,7 +79,6 @@ h1 {
 .landing {
   display: flex;
   flex-direction: column;
-  padding-top: 5rem;
   font-size: 4rem;
 }
 
@@ -120,4 +123,63 @@ h1 {
   background-color: var(--primary2);
   border: solid 0px;
   border-radius: 50%;
+}
+
+/******************/
+/*PROJECTS*/
+/******************/
+
+.projects-list {
+  display: grid;
+  gap: 1rem;
+  padding-bottom: 1rem;
+}
+
+@media screen and (min-width: 576px) {
+  .projects-list {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.project {
+  background-color: var(--primary5);
+  color: var(--primary);
+  padding: 1rem;
+  border-radius: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-weight: 300;
+  font-size: 0.9rem;
+}
+
+.tag {
+  color: var(--primary5);
+  background: var(--primary3);
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.2rem 0.4rem;
+  text-transform: uppercase;
+  width: fit-content;
+  font-size: 0.7rem;
+  font-weight: bold;
+  margin-right: 0.2rem;
+  text-decoration: none;
+}
+
+.tags {
+  display: flex;
+}
+
+.project-external-button {
+  border: none;
+  background-color: var(--primary2);
+  color: var(--primary5);
+  font-weight: bold;
+  padding: 1rem;
+  width: 100%;
+}
+
+.project-external-button:hover {
+  cursor: pointer;
 }
