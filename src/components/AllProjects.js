@@ -37,7 +37,6 @@ const AllProjects = () => {
             <GatsbyImage image={pathToImage} alt={title} />
             <div>
               <h2 style={{ color: "#19647e" }}>{title}</h2>
-              <b>{year}</b>
               <div className="tags">
                 {tags.map(tag => (
                   <div className="tag">{tag}</div>
